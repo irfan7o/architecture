@@ -24,10 +24,21 @@ const linkAction = () => {
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 const swiperHome = new Swiper('.home__swiper', {
-    direction: 'vertical',
+    loop: true,
+    speed: 800,
+    parallax: 'fade',
 
     pagination: {
         el: '.swiper-pagination',
+        type: 'fraction',
+
+        formatFractionCurrent: (number) => {
+            return '0' + number
+        },
+        formatFractionTotal: (number) => {
+            return '0' + number
+        }
+
     },
 
     navigation: {
