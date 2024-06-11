@@ -26,7 +26,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 const swiperHome = new Swiper('.home__swiper', {
     loop: true,
     speed: 800,
-    parallax: 'true',
+    parallax: true,
     effect: 'fade',
 
     pagination: {
@@ -43,7 +43,8 @@ const swiperHome = new Swiper('.home__swiper', {
     },
 
     navigation: {
-        nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
     },
+
 })
