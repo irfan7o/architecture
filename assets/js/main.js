@@ -17,7 +17,7 @@ if (navClose) {
 const navLink = document.querySelectorAll('.nav__link')
 
 const linkAction = () => {
-    const navMenu = document.getElementById('.nav-menu')
+    const navMenu = document.getElementById('nav-menu')
     navMenu.classList.remove('show-menu')
 }
 
@@ -26,7 +26,8 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 const swiperHome = new Swiper('.home__swiper', {
     loop: true,
     speed: 800,
-    parallax: 'fade',
+    parallax: 'true',
+    effect: 'fade',
 
     pagination: {
         el: '.swiper-pagination',
